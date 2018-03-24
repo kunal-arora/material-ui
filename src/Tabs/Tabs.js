@@ -61,6 +61,13 @@ class Tabs extends Component {
     /**
      * Override the default tab template used to wrap the content of each tab element.
      */
+    /**
+     * Override the inline-styles of the tab-labels container.
+     */
+    tabItemContainerClassName: PropTypes.string,
+    /**
+     * Override the default tab template used to wrap the content of each tab element.
+     */
     tabTemplate: PropTypes.func,
     /**
      * Override the inline-styles of the tab template.
@@ -177,6 +184,7 @@ class Tabs extends Component {
       onChange, // eslint-disable-line no-unused-vars
       style,
       tabItemContainerStyle,
+      tabItemContainerClassName,
       tabTemplate,
       tabTemplateStyle,
       ...other
@@ -228,7 +236,7 @@ class Tabs extends Component {
 
     return (
       <div style={prepareStyles(Object.assign({}, style))} {...other}>
-        <div style={prepareStyles(Object.assign(styles.tabItemContainer, tabItemContainerStyle))}>
+        <div className={tabItemContainerClassName} style={prepareStyles(Object.assign(styles.tabItemContainer, tabItemContainerStyle))}>
           {tabs}
         </div>
         <div style={{width: inkBarContainerWidth}}>
