@@ -235,7 +235,10 @@ var Tabs = function (_Component) {
         (0, _extends3.default)({ style: prepareStyles((0, _simpleAssign2.default)({}, style)) }, other),
         _react2.default.createElement(
           'div',
-          { className: tabItemContainerClassName, style: prepareStyles((0, _simpleAssign2.default)(styles.tabItemContainer, tabItemContainerStyle)) },
+          {
+            className: tabItemContainerClassName,
+            style: prepareStyles((0, _simpleAssign2.default)(styles.tabItemContainer, tabItemContainerStyle))
+          },
           tabs
         ),
         _react2.default.createElement(
@@ -303,14 +306,11 @@ Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
   /**
    * Override the inline-styles of the tab-labels container.
    */
-  tabItemContainerStyle: _propTypes2.default.object,
+  tabItemContainerClassName: _propTypes2.default.string,
   /**
    * Override the default tab template used to wrap the content of each tab element.
    */
-  /**
-   * Override the inline-styles of the tab-labels container.
-   */
-  tabItemContainerClassName: _propTypes2.default.string,
+  tabItemContainerStyle: _propTypes2.default.object,
   /**
    * Override the default tab template used to wrap the content of each tab element.
    */

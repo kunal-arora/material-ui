@@ -57,14 +57,11 @@ class Tabs extends Component {
     /**
      * Override the inline-styles of the tab-labels container.
      */
-    tabItemContainerStyle: PropTypes.object,
+    tabItemContainerClassName: PropTypes.string,
     /**
      * Override the default tab template used to wrap the content of each tab element.
      */
-    /**
-     * Override the inline-styles of the tab-labels container.
-     */
-    tabItemContainerClassName: PropTypes.string,
+    tabItemContainerStyle: PropTypes.object,
     /**
      * Override the default tab template used to wrap the content of each tab element.
      */
@@ -236,7 +233,10 @@ class Tabs extends Component {
 
     return (
       <div style={prepareStyles(Object.assign({}, style))} {...other}>
-        <div className={tabItemContainerClassName} style={prepareStyles(Object.assign(styles.tabItemContainer, tabItemContainerStyle))}>
+        <div
+          className={tabItemContainerClassName}
+          style={prepareStyles(Object.assign(styles.tabItemContainer, tabItemContainerStyle))}
+        >
           {tabs}
         </div>
         <div style={{width: inkBarContainerWidth}}>
