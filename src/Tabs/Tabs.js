@@ -57,7 +57,7 @@ class Tabs extends Component {
     /**
      * Override the inline-styles of the root element.
      */
-    slideArrows: PropTypes.object,
+    slideArrows: PropTypes.node,
     /**
      * Override the inline-styles of the tab-labels container.
      */

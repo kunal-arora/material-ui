@@ -308,7 +308,7 @@ Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
   /**
    * Override the inline-styles of the root element.
    */
-  slideArrows: _propTypes2.default.object,
+  slideArrows: _propTypes2.default.node,
   /**
    * Override the inline-styles of the tab-labels container.
    */
