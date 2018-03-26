@@ -55,6 +55,10 @@ class Tabs extends Component {
      */
     style: PropTypes.object,
     /**
+     * Override the inline-styles of the root element.
+     */
+    slideArrows: PropTypes.object,
+    /**
      * Override the inline-styles of the tab-labels container.
      */
     tabItemContainerClassName: PropTypes.string,
@@ -180,6 +184,7 @@ class Tabs extends Component {
       inkBarStyle,
       onChange, // eslint-disable-line no-unused-vars
       style,
+      slideArrows,
       tabItemContainerStyle,
       tabItemContainerClassName,
       tabTemplate,
@@ -237,6 +242,7 @@ class Tabs extends Component {
           className={tabItemContainerClassName}
           style={prepareStyles(Object.assign(styles.tabItemContainer, tabItemContainerStyle))}
         >
+          {slideArrows ? slideArrows : null}
           {tabs}
         </div>
         <div style={{width: inkBarContainerWidth}}>

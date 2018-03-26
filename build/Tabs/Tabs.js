@@ -189,11 +189,12 @@ var Tabs = function (_Component) {
           inkBarStyle = _props.inkBarStyle,
           onChange = _props.onChange,
           style = _props.style,
+          slideArrows = _props.slideArrows,
           tabItemContainerStyle = _props.tabItemContainerStyle,
           tabItemContainerClassName = _props.tabItemContainerClassName,
           tabTemplate = _props.tabTemplate,
           tabTemplateStyle = _props.tabTemplateStyle,
-          other = (0, _objectWithoutProperties3.default)(_props, ['contentContainerClassName', 'contentContainerStyle', 'initialSelectedIndex', 'inkBarStyle', 'onChange', 'style', 'tabItemContainerStyle', 'tabItemContainerClassName', 'tabTemplate', 'tabTemplateStyle']);
+          other = (0, _objectWithoutProperties3.default)(_props, ['contentContainerClassName', 'contentContainerStyle', 'initialSelectedIndex', 'inkBarStyle', 'onChange', 'style', 'slideArrows', 'tabItemContainerStyle', 'tabItemContainerClassName', 'tabTemplate', 'tabTemplateStyle']);
       var prepareStyles = this.context.muiTheme.prepareStyles;
 
       var styles = getStyles(this.props, this.context);
@@ -239,6 +240,7 @@ var Tabs = function (_Component) {
             className: tabItemContainerClassName,
             style: prepareStyles((0, _simpleAssign2.default)(styles.tabItemContainer, tabItemContainerStyle))
           },
+          slideArrows ? slideArrows : null,
           tabs
         ),
         _react2.default.createElement(
@@ -303,6 +305,10 @@ Tabs.propTypes = process.env.NODE_ENV !== "production" ? {
    * Override the inline-styles of the root element.
    */
   style: _propTypes2.default.object,
+  /**
+   * Override the inline-styles of the root element.
+   */
+  slideArrows: _propTypes2.default.object,
   /**
    * Override the inline-styles of the tab-labels container.
    */
